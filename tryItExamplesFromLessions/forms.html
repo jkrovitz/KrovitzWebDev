@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  Name: Jeremy Krovitz
+  Date Created: July 17, 2019
+  Most recent revision:
+-->
+<html lang="en">
+  <head>
+    <title>Forms Practice</title>
+  </head>
+  <body>
+    <header>
+      <h1>Forms Practice</h1>
+        <h2>Examples refer to the Web Development Course page <a target="_blank" href="https://lms.thesoftwareguild.com/courses/281/pages/forms-in-html?module_item_id=35663">Forms in HTML</a></h2>
+    </header>
+    <nav>
+    </nav>
+    <form action="fakePage.html" method="POST">
+      Text Input <input type="text" name="myTextInput" required /><br/>
+      Radio Buttons:<br />
+      <input type="radio" name="answer" value="YES" checked />Yes<br />
+      <input type="radio" name="answer" value="NO" /> No<br />
+      <input type="radio" name="answer" value="MAYBE" />Maybe<br />
+      Password Input: <input type="password" name="userPassword" /><br />
+      <input type="checkbox" name="myChoices" value="Soup" checked />Soup<br />
+      <input type="checkbox" name="myChoices" value="Salad" checked />Salad<br />
+      <input type="checkbox" name="myChoices" value="Fries" checked />Fries<br />
+      <input type="checkbox" name="myChoices" value="Desert" checked />Desert<br />
+      <select name="phones" />
+        <option value="iPhone6">Apple</option>
+        <option value="GalaxyS6">Android</option>
+      </select><br />
+      <textarea name="briefDescription"></textarea><br />
+      <input type="submit" /><input type="reset" /><br />
+    </form>
+    <footer>
+    </footer>
+  </body>
+</html>
