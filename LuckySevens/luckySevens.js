@@ -1,33 +1,51 @@
-do{
-  userInput = prompt("How many dollars do you have to bet");
-  if(userInput <= 0.00){
-    alert("The bet must be more than $0.00");
-  }
-}while(userInput <=0.00);
+/*
+Name: Jeremy Krovitz
+Date Created: 7/27/2019
+Most recent revision: 7/28/2019
+*/
 
-var moneyLeft = userInput;
+function play(){
+	var startBet = Number(document.forms["luckySevens"]["bet"].value);
+	var money = startBet;
+	var firstDie;
+	var secondDie;
+	var diceSum;
+	var maxWinnings = 0;
+	var rolls = 0;
+	var rollsAtMax = 0;
 
-// do{
-//   moneyLeft
-// }
-document.getElementById("playBtn").onclick= function(){getSumOfDiceRolls(moneyLeft)};
-
-function getSumOfDiceRolls(){
-  diceRoll1 = rollDice();
-  diceRoll2 = rollDice();
-  sumOfDiceRolls = diceRoll1 + diceRoll2;
-  if (sumOfDiceRolls != 7){
-    moneyLeft = moneyLeft - 1.00;
-    console.log(moneyLeft);
-    return moneyLeft;
-  }
-  else{
-    moneyLeft = moneyLeft + 4.00;
-    console.log(moneyLeft);
-    return moneyLeft;
-  }
-
+	if(money<=0){
+		alert("Starting bet needs to be greater than $0");
+	}
+	else{
+		while(money > 0){
+			firstDie = rollDice();
+			secondDie = rollDice();
+			diceSum = firstDie + secondDie;
+			rolls++;
+			if(diceSum != 7){
+				money--;
+				console.log("lost");
+			}
+			else{
+				money += 4;
+				if(money > maxWinnings){
+					maxWinnings += (money-maxWinnings);
+					rollsAtMax = rolls;
+				}
+				console.log("win");
+			}
+		}
+	}
+	document.getElementById("results").style.display = "block";
+	document.getElementById("submitButton").innerText = "Play Again!";
+	document.getElementById("start").innerText = startBet;
+	document.getElementById("rollsNum").innerText = rolls;
+	document.getElementById("max").innerText = maxWinnings;
+	document.getElementById("rollsAtMax").innerText = rollsAtMax;
+	return false;
 }
-function rollDice(){
-  return Math.floor(Math.random()*6) +1;
+
+function rollDice() {
+	return Math.floor(Math.random() * 6) + 1;
 }

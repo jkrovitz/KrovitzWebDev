@@ -1,3 +1,114 @@
+body{
+  background-color: #d8d8d8;
+}
+
 header{
-  background-color: #005596; 
+  background-color: #005596 !important;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+nav a{
+  margin: 20px;
+  width: 120px;
+}
+
+nav a:visited{
+  color: #76D4FA !important;
+}
+
+nav a:hover{
+  background-color: #fef9ff;
+  color: #5b7d87;
+}
+
+nav a:active{
+  font-weight: bold;
+}
+
+
+nav{
+  padding-bottom: 12px;
+}
+
+nav .btn{
+  background-color: #005596;
+  border-top: thin #005596 solid;
+  border-bottom: thin #005596 solid;
+}
+
+nav .btn:hover{
+  font-weight bold;
+  background-color: #003365;
+  color: #ffffff !important;
+}
+
+@font-face {
+   font-family: NewslabMedium;
+   src: url(fonts/NewslabMedium.woff);
+}
+
+@font-face {
+   font-family: DINNextLTPro;
+   src: url(fonts/DINNextLTPro-Regular.woff);
+}
+
+h1 {
+   font-family: NewslabMedium;
+}
+
+h1{
+  font-size: 3.5rem; //1 rem larer than Bootstrap's default for h1 headers. See: https://www.w3schools.com/bootstrap4/bootstrap_typography.asp.
+}
+
+h2{
+  text-align: center;
+  font-family: NewslabMedium;
+}
+
+p, h3, input, label{
+  font-family: DINNextLTPro;
+}
+.col-sm-4{
+  text-align: center;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color: white;
+  border: solid 2px #005596;
+
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4{
+      margin-bottom: 1rem;
+    }
+    form{
+      padding: 40px;
+    }
+    /* img{
+      width: 70%;
+    } */
+}
+
+@media screen and (min-width: 768px) {
+  .add-margin-top-larger-display{
+    margin-top: .5rem;
+  }
+}
+
+.footer {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #005596 !important;
+   color: white;
+   text-align: center;
+}
+
+.space-between-address-and-telephone{
+  margin-top: -20px;
 }

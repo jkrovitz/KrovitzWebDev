@@ -2,55 +2,177 @@
 <!--
   Name: Jeremy Krovitz
   Date Created: 7/18/2019
-  Most recent revision:
+  Most recent revision: 7/28/2019
 -->
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- restaurantStyles.css -->
+    <link rel="stylesheet" href="css/restaurantStyles.css" type="text/css">
+
+    <style>
+        .menu-container-class {
+            /* background-color: #F7F7F7; */
+            background-color: #FDF6E4;
+            border: solid 2px #005596;
+        }
+
+        .food-item {
+            color: #005596;
+            font-weight: bold;
+        }
+
+        h3,
+        th {
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 15px !important;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/286141daa1.js"></script>
     <title>Menu</title>
-  </head>
-  <body>
-    <header>
-      <p>Menu</p>
-      <hr />
-      <h1>Yee Ol' Diner</h1>
-    </header>
-    <hr />
-    <nav>
-      <p><a href="index.html">Home</a></p>
-      <p><a href="menu.html">Menu</a></p>
-      <p><a href="contact.html">Contact Us</a></p>
-    </nav>
-    <hr />
-    <div class="container mt-3">
-    <div class="row  justify-content-center">
-   <div class="col-sm-4" style="background-color:lavender;"><p><strong>Burger and Fries</strong>An American Classic! Your choice with or without cheese Pickle, onion, tomato, and lettuce Served with our famous thick cut french fries $7.95</p></div>
-   <div class="col-sm-4" style="background-color:lavenderblush;"><p><strong>Hot Dog and Chips</strong>A Summer Classic! Your choice - white or wheat bun Relish, mustard, and ketchup Served with our house-made chips $7.95</p></div>
-   <div class="col-sm-4" style="background-color:lavender;"><p><strong>Italian Sausage and Peppers</strong>An All-Time Favorite! Your choice - mild or spicy Cole Slaw Served with garlic mashers $10.95</p></div>
- </div>
- <div class="row">
-<div class="col-sm-4" style="background-color:red;"><p><strong>Tenderloin Sandwhich and Chips</strong>Really Hits the Spot! Plain or Sesame Seed Bun Pickle onion, tomato, and lettuce Served with our house-made chips $8.95</p></div>
-<div class="col-sm-4" style="background-color:orange;"><p><strong>House Salad</strong> On the Lighter Side Your choice - with or without cheese Iceberg lettuce, tomatoes, peppers Thousand Island or Ranch Dressing Served with a dinner roll $6.95</p></div>
-<div class="col-sm-4" style="background-color:red;"><p><strong>Brisket Sandwhich and Fries</strong> A Taste of Texas! Smoked Brisket on thick-cut Texas Toast Cole Slaw Served with our famous thick-cut french fries $7.95</p></div>
-</div>
+</head>
 
-</div>
-</div>
-    <footer pb-5>
-      <address>1003 Krovitz Street, Maple Grove, Minnesota, 55311</address><br />
-      <a href="tel:7631031996">(763) 103-1996</a>
+<body>
+    <header class="jumbotron jumbotron-fluid">
+        <h1>Krovitz Kafe</h1>
+        <hr>
+        <h2> Menu</h2>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <nav>
+                <a class="btn nav-tabs" href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a class="btn active nav-tabs" href="menu.html">Menu</a>
+                <a class="btn nav-tabs" href="contact.html">Contact Us</a>
+                <div class="clear-float"></div>
+            </nav>
+        </div>
+    </div>
+    <br />
+    <h2>The Menu</h2>
+
+    <br />
+    <h3>Beverages</h3>
+
+    <div class="container-fluid">
+        <div class="container mt-3 p-3 menu-container-class">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Beverage</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Root Beer</td>
+                        <td>$3.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bottled Water</td>
+                        <td>$1.25</td>
+                    </tr>
+                    <tr>
+                        <td>Lemonade</td>
+                        <td>$1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Iced Tea</td>
+                        <td>$1.25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br />
+    <h3>Entr&eacute;es</h3>
+    <div class="container-fluid">
+        <div class="container mt-3 p-3 menu-container-class">
+            <div class="row  justify-content-center">
+                <div class="col-sm-4">
+                    <p><span class="food-item">Burger and Fries</span>
+                        <br />An American Classic!
+                        <br /> Your choice with or without cheese
+                        <br /> Pickle, onion, tomato, and lettuce
+                        <br /> Served with our famous thick cut
+                        <br /> french fries
+                        <br /><strong>$7.95</strong></p>
+                </div>
+                <div class="col-sm-4">
+                    <p><span class="food-item">Hot Dog and Chips</span>
+                        <br />A Summer Classic!
+                        <br /> Your choice - white or wheat bun
+                        <br /> Relish, mustard, and ketchup
+                        <br /> Served with our house-made chips
+                        <br /> <strong>$7.95</strong></p>
+                </div>
+                <div class="col-sm-4">
+                    <p><span class="food-item">Italian Sausage and Peppers</span>
+                        <br />An All-Time Favorite!
+                        <br /> Your choice - mild or spicy Cole Slaw
+                        <br /> Served with garlic mashers
+                        <br /> <strong>$10.95</strong></p>
+                </div>
+            </div>
+            <div class="row add-margin-top-larger-display">
+                <div class="col-sm-4">
+                    <p><span class="food-item">Tenderloin Sandwhich and Chips</span>
+                        <br />Really Hits the Spot!
+                        <br /> Plain or Sesame Seed Bun
+                        <br /> Pickle onion, tomato, and lettuce
+                        <br />Served with our house-made chips
+                        <br /> <strong>$8.95</strong></p>
+                </div>
+                <div class="col-sm-4">
+                    <p><span class="food-item">House Salad</span>
+                        <br /> On the Lighter Side
+                        <br /> Your choice - with or without cheese
+                        <br /> Iceberg lettuce, tomatoes, peppers
+                        <br /> Thousand Island
+                        <br /> or Ranch Dressing
+                        <br /> Served with a dinner roll
+                        <br /> <strong>$6.95</strong></p>
+                </div>
+                <div class="col-sm-4">
+                    <p><span class="food-item">Brisket Sandwhich and Fries</span>
+                        <br /> A Taste of Texas!
+                        <br /> Smoked Brisket on thick-cut
+                        <br /> Texas Toast
+                        <br /> Cole Slaw
+                        <br /> Served with our famous thick-cut
+                        <br /> french fries
+                        <br /> <strong>$7.95</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="text-center pt-3">
+            <address>1003 Krovitz Street, Maple Grove, Minnesota, 55311</address>
+            <a class="space-between-address-and-telephone" href="tel:7631031996">(763) 103-1996</a>
+        </div>
     </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3
-  </body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
 </html>
