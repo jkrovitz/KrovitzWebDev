@@ -7,19 +7,14 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- restaurantStyles.css -->
-    <link rel="stylesheet" href="css/restaurantStyles.css" type="text/css">
-
     <style>
         .menu-container-class {
-            /* background-color: #F7F7F7; */
             background-color: #FDF6E4;
             border: solid 2px #005596;
         }
@@ -39,27 +34,33 @@
             padding: 15px !important;
         }
     </style>
+
+    <!-- restaurantStyles.css -->
+    <link rel="stylesheet" href="css/restaurantStyles.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/286141daa1.js"></script>
+    <script src="js/index.js"></script>
     <title>Menu</title>
 </head>
 
 <body>
     <header class="jumbotron jumbotron-fluid">
-        <h1>Krovitz Kafe</h1>
-        <hr>
-        <h2> Menu</h2>
+        <h1><a class="headerLink" href="index.html">Krovitz Kafe</a></h1>
+
     </header>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <nav>
-                <a class="btn nav-tabs" href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a class="btn active nav-tabs" href="menu.html">Menu</a>
-                <a class="btn nav-tabs" href="contact.html">Contact Us</a>
-                <div class="clear-float"></div>
-            </nav>
-        </div>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html"> <i class="fas fa-home"></i> Home</a>
+        <a class="active" href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
+
     <br />
     <h2>The Menu</h2>
 
@@ -164,8 +165,9 @@
     <footer class="footer">
         <div class="text-center pt-3">
             <address>1003 Krovitz Street, Maple Grove, Minnesota, 55311</address>
-            <a class="space-between-address-and-telephone" href="tel:7631031996">(763) 103-1996</a>
+            <a style="color: white" class="space-between-address-and-telephone" href="tel:7631031996">(763) 103-1996</a>
         </div>
+        <br>
     </footer>
 
     <!-- Optional JavaScript -->
